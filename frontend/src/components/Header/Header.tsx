@@ -11,7 +11,7 @@ function Header() {
           src={PAPER_PLANE_ICON}
           width={50}
           height={50}
-          alt="teste"
+          alt="Avião de papel icone"
         />
 
         <ul className="header-menu-list">

@@ -7,13 +7,25 @@ function Card() {
     <StyledCard>
       <div className="info-wrapper">
         <div className="avatar-wrapper">
-          <Image className="avatar-picture" src={AVATAR_MAN} height={100} width={100} alt="teste" />
+          <Image
+            className="avatar-picture"
+            src={AVATAR_MAN}
+            height={100}
+            width={100}
+            alt="Foto de evatar do usuário"
+          />
         </div>
         <div className="profile-informations-wrapper">
           <h1>Felipe</h1>
           <div className="profile-informations">
             <div className="profile-item">
-              <Image className="star-icon" src={STAR_ICON} height={20} width={20} alt="teste" />
+              <Image
+                className="star-icon"
+                src={STAR_ICON}
+                height={20}
+                width={20}
+                alt="ícone de estrela"
+              />
               <p>4.2</p>
             </div>
             <div className="profile-item">
