@@ -3,7 +3,9 @@ import { StyledFooter } from '@/components/Footer/Footer.styled';
 function Footer() {
   return (
     <StyledFooter>
-      <h1>Footer</h1>
+      <small>
+        Desenvolvido por: <strong>Victor lira</strong>
+      </small>
     </StyledFooter>
   );
 }
