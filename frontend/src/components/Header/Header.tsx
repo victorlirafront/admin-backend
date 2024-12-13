@@ -5,19 +5,21 @@ import Image from 'next/image';
 function Header() {
   return (
     <StyledHeader>
-      <Image
-        className="paper-plane-icon"
-        src={PAPER_PLANE_ICON}
-        width={50}
-        height={50}
-        alt="teste"
-      />
+      <div className="container">
+        <Image
+          className="paper-plane-icon"
+          src={PAPER_PLANE_ICON}
+          width={50}
+          height={50}
+          alt="teste"
+        />
 
-      <ul className="header-menu-list">
-        <li className="header-menu-list-item selected">Voluntários</li>
-        <li className="header-menu-list-item">Eventos</li>
-        <li className="header-menu-list-item">Calendário</li>
-      </ul>
+        <ul className="header-menu-list">
+          <li className="header-menu-list-item selected">Voluntários</li>
+          <li className="header-menu-list-item">Eventos</li>
+          <li className="header-menu-list-item">Calendário</li>
+        </ul>
+      </div>
     </StyledHeader>
   );
 }

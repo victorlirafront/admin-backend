@@ -3,37 +3,41 @@ import styled from 'styled-components';
 export const StyledHeader = styled.header`
   background: #06aec8;
   color: #fff;
-  padding: 10px 40px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 10px 0;
 
-  .paper-plane-icon {
-    transform: rotate(8deg);
-  }
-
-  .header-menu-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
 
-    .header-menu-list-item {
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: bolder;
-      font-size: 14px;
-      cursor: pointer;
+    .paper-plane-icon {
+      transform: rotate(8deg);
+    }
 
-      &.selected {
-        color: #fff;
-      }
+    .header-menu-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
 
-      color: #e3e3e3;
+      .header-menu-list-item {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: 14px;
+        cursor: pointer;
 
-      &:not(:last-child) {
-        margin-right: 30px;
+        &.selected {
+          color: #fff;
+        }
+
+        color: #e3e3e3;
+
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
       }
     }
   }
