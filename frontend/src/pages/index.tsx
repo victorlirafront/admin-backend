@@ -1,3 +1,5 @@
+import Card from '@/components/Card/Card';
+import CardsWrapper from '@/components/CardsWrapper/CardsWrapper';
 import { FAVICON } from '@/constants/images';
 import Head from 'next/head';
 
@@ -10,7 +12,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={FAVICON} />
       </Head>
-      <div className="main"></div>
+      <div className="main">
+        <CardsWrapper>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </CardsWrapper>
+      </div>
     </>
   );
 }
