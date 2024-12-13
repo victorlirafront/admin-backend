@@ -4,7 +4,7 @@ function Footer() {
   return (
     <StyledFooter>
       <small>
-        Desenvolvido por: <strong>Victor lira</strong>
+        Desenvolvido por: <strong>Victor Lira</strong>
       </small>
     </StyledFooter>
   );
