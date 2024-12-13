@@ -2,8 +2,11 @@ import Card from '@/components/Card/Card';
 import CardsWrapper from '@/components/CardsWrapper/CardsWrapper';
 import { FAVICON } from '@/constants/images';
 import Head from 'next/head';
+import { useAppSelector } from '@/redux/store';
 
 export default function Home() {
+  const username = useAppSelector((state) => state.usersReducer.users[0].username);
+
   return (
     <>
       <Head>
