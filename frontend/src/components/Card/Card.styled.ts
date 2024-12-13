@@ -16,4 +16,9 @@ export const StyledCard = styled.div`
     transform: scale(1.05);
     transition: 0.1s ease-in-out;
   }
+
+  .avatar-picture {
+    border-radius: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
 `;
