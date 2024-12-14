@@ -48,7 +48,9 @@ export default function Home({ data }: HomeProps) {
                 <Card
                   onDeleteUser={() => deleteUser(user.id)}
                   username={user.username}
-                  key={user.username}
+                  key={user.id}
+                  state={user.state}
+                  score={user.score}
                 />
               );
             })
