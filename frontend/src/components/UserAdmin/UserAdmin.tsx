@@ -1,8 +1,11 @@
 import { SEARCH_ICON } from '@/constants/images';
 import { StyledUserAdmin } from './UserAdmin.styled';
 import Image from 'next/image';
+import { UserAdminProps } from './UserAdmim.types';
 
-function UserAdmin() {
+function UserAdmin(props: UserAdminProps) {
+  const { onOpenAddUserForm } = props;
+
   return (
     <StyledUserAdmin>
       <div className="search-wrapper">
@@ -17,7 +20,9 @@ function UserAdmin() {
           />
         </div>
       </div>
-      <button className="add-new-user">Adicionar usuário</button>
+      <button onClick={onOpenAddUserForm} className="add-new-user">
+        Adicionar usuário
+      </button>
     </StyledUserAdmin>
   );
 }
