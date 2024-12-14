@@ -1,14 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { UsersCollectionState, InitialState } from './users-slice.types';
 
 const initialState = {
-  users: [
-    {
-      username: 'victor',
-      state: 'ES',
-      score: 5,
-    },
-  ] as UsersCollectionState[],
+  users: [] as UsersCollectionState[],
 } as InitialState;
 
 export const usersCollection = createSlice({
@@ -18,8 +12,11 @@ export const usersCollection = createSlice({
     callTest: () => {
       return initialState;
     },
+    setUsers: (state, action: PayloadAction<UsersCollectionState[]>) => {
+      state.users = action.payload;
+    },
   },
 });
 
-export const { callTest } = usersCollection.actions;
+export const { callTest, setUsers } = usersCollection.actions;
 export default usersCollection.reducer;

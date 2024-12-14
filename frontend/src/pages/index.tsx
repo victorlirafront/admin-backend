@@ -2,14 +2,24 @@ import Card from '@/components/Card/Card';
 import CardsWrapper from '@/components/CardsWrapper/CardsWrapper';
 import { FAVICON } from '@/constants/images';
 import Head from 'next/head';
-// import { useAppSelector } from '@/redux/store';
 import axios from 'axios';
 import { HomeProps, User } from './types';
 import { API_END_POINT } from '@/constants/endpoints';
+import { setUsers } from '@/redux/features/users-slice/users-slice';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { useAppSelector } from '@/redux/store';
 
 export default function Home({ data }: HomeProps) {
-  // const username = useAppSelector((state) => state.usersReducer.users[0]?.username);
-  const hasValidUserCollection = data.length > 0;
+  const dispatch = useDispatch();
+  const userCollection = useAppSelector((state) => state.usersReducer.users);
+  const isUserCollectionValid = userCollection.length > 0;
+
+  useEffect(() => {
+    if (data.length > 0) {
+      dispatch(setUsers(data));
+    }
+  }, [data, dispatch]);
 
   return (
     <>
@@ -21,11 +31,11 @@ export default function Home({ data }: HomeProps) {
       </Head>
       <div className="main">
         <CardsWrapper>
-          {!hasValidUserCollection ? (
-            <h1 style={{ color: 'red' }}>Ouve um erro ao buscas os usuários</h1>
+          {!isUserCollectionValid ? (
+            <h1 style={{ color: 'red' }}>Houve um erro ao buscar os usuários</h1>
           ) : (
-            data.map((user) => {
-              return <Card key={user.id} />;
+            userCollection.map((user) => {
+              return <Card username={user.username} key={user.username} />;
             })
           )}
         </CardsWrapper>
