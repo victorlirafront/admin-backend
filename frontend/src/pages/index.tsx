@@ -79,7 +79,7 @@ export default function Home({ data }: HomeProps) {
             {!isUserCollectionValid ? (
               <h1 style={{ color: 'red' }}>Houve um erro ao buscar os usuários</h1>
             ) : (
-              userCollection.map((user) => {
+              [...userCollection].reverse().map((user) => {
                 return (
                   <Card
                     onDeleteUser={() => deleteUser(user.id)}
