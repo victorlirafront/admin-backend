@@ -54,7 +54,7 @@ function UserAdmin(props: UserAdminProps) {
           <input
             id="search"
             type="search"
-            placeholder="Busque pelo nome"
+            placeholder="Busque pelo nome, estado ou ocupação"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyDown={handleKeyDown}
