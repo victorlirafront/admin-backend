@@ -2,23 +2,15 @@ import { SEARCH_ICON } from '@/constants/images';
 import { StyledUserAdmin } from './UserAdmin.styled';
 import Image from 'next/image';
 import { UserAdminProps } from './UserAdmim.types';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { setUsers } from '@/redux/features/users-slice/users-slice';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { API_END_POINT } from '@/constants/endpoints';
-import { User } from '@/pages/types';
-import { useAppSelector } from '@/redux/store';
 
 function UserAdmin(props: UserAdminProps) {
   const { onOpenAddUserForm } = props;
   const [searchQuery, setSearchQuery] = useState('');
-  const [originaUserCollection, setOriginaUser] = useState<User[]>();
-  const userCollection = useAppSelector((state) => state.usersReducer.users);
-
-  useEffect(() => {
-    setOriginaUser(userCollection);
-  }, []);
 
   const dispatch = useDispatch();
 
@@ -27,11 +19,7 @@ function UserAdmin(props: UserAdminProps) {
       const response = await axios.get(`${API_END_POINT}/users/search?q=${searchQuery}`);
       const filteredUsers = response.data;
 
-      if (filteredUsers.length === 0 && originaUserCollection) {
-        dispatch(setUsers(originaUserCollection));
-      } else {
-        dispatch(setUsers(filteredUsers));
-      }
+      dispatch(setUsers(filteredUsers));
     } catch (error) {
       console.error('Erro ao buscar os usuários:', error);
     }
