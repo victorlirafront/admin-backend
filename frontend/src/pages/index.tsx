@@ -21,6 +21,15 @@ export default function Home({ data }: HomeProps) {
     }
   }, [data, dispatch]);
 
+  const deleteUser = async (userId: string) => {
+    try {
+      await axios.delete(`${API_END_POINT}/users/${userId}`);
+      dispatch(setUsers(userCollection.filter((user) => user.id !== userId)));
+    } catch (error) {
+      console.error('Erro ao deletar o usuário:', error);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -35,7 +44,13 @@ export default function Home({ data }: HomeProps) {
             <h1 style={{ color: 'red' }}>Houve um erro ao buscar os usuários</h1>
           ) : (
             userCollection.map((user) => {
-              return <Card username={user.username} key={user.username} />;
+              return (
+                <Card
+                  onDeleteUser={() => deleteUser(user.id)}
+                  username={user.username}
+                  key={user.username}
+                />
+              );
             })
           )}
         </CardsWrapper>
@@ -46,7 +61,7 @@ export default function Home({ data }: HomeProps) {
 
 export async function getServerSideProps() {
   try {
-    const response = await axios.get(API_END_POINT);
+    const response = await axios.get(`${API_END_POINT}/users`);
     const data: User[] = response.data;
 
     return {
