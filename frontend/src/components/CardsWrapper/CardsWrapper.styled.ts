@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledCardsWrapper = styled.div`
   padding: 10px;
-  height: 100vh;
+  min-height: calc(100vh - 128px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +14,7 @@ export const StyledCardsWrapper = styled.div`
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 100%;
+    margin: 100px 0 100px 0;
 
     .cards-container {
       display: flex;

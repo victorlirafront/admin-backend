@@ -26,8 +26,6 @@ function Header() {
 
         <ul className="header-menu-list">
           <li className="header-menu-list-item selected">Voluntários</li>
-          <li className="header-menu-list-item">Eventos</li>
-          <li className="header-menu-list-item">Calendário</li>
         </ul>
       </div>
     </StyledHeader>
