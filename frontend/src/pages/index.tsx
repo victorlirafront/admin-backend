@@ -11,10 +11,11 @@ import { useDispatch } from 'react-redux';
 import { useAppSelector } from '@/redux/store';
 import UserAdmin from '@/components/UserAdmin/UserAdmin';
 import Modal from '@/components/Modal/Modal';
+import AddUserForm from '@/components/AddUserForm/AddUserForm';
 
 export default function Home({ data }: HomeProps) {
   const dispatch = useDispatch();
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const userCollection = useAppSelector((state) => state.usersReducer.users);
   const isUserCollectionValid = userCollection.length > 0;
 
@@ -37,6 +38,10 @@ export default function Home({ data }: HomeProps) {
     setShowModal(false);
   };
 
+  const onOpenAddUserForm = () => {
+    setShowModal((prev) => !prev);
+  };
+
   return (
     <>
       <Head>
@@ -47,12 +52,12 @@ export default function Home({ data }: HomeProps) {
       </Head>
 
       <Modal className={showModal ? 'active' : ''} closeModal={closeModalHandler}>
-        <h1></h1>
+        <AddUserForm />
       </Modal>
 
       <div className="main">
         <CardsWrapper>
-          <UserAdmin />
+          <UserAdmin onOpenAddUserForm={onOpenAddUserForm} />
           <div className="cards-container">
             {!isUserCollectionValid ? (
               <h1 style={{ color: 'red' }}>Houve um erro ao buscar os usuários</h1>
