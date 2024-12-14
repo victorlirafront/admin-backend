@@ -4,10 +4,10 @@ import Image from 'next/image';
 import { CardProps } from './Card.types';
 
 function Card(props: CardProps) {
-  const { username, state, score, occupation, onDeleteUser } = props;
+  const { username, state, score, occupation, onDeleteUser, onUpdateUser } = props;
 
   return (
-    <StyledCard onClick={onDeleteUser}>
+    <StyledCard>
       <div className="info-wrapper">
         <div className="avatar-wrapper">
           <Image
@@ -41,8 +41,12 @@ function Card(props: CardProps) {
         </div>
       </div>
       <div className="controls">
-        <button className="button edit">Editar</button>
-        <button className="button remove">Deletar</button>
+        <button className="button edit" onClick={onUpdateUser}>
+          Editar
+        </button>
+        <button className="button remove" onClick={onDeleteUser}>
+          Deletar
+        </button>
       </div>
     </StyledCard>
   );
