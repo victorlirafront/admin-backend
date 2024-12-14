@@ -82,6 +82,7 @@ export default function Home({ data }: HomeProps) {
               [...userCollection].reverse().map((user) => {
                 return (
                   <Card
+                    id={user.id}
                     onDeleteUser={() => deleteUser(user.id)}
                     onUpdateUser={() => updateUser(user)}
                     username={user.username}
