@@ -2,9 +2,16 @@ import { AVATAR_MAN, STAR_ICON } from '@/constants/images';
 import { StyledCard } from './Card.styled';
 import Image from 'next/image';
 import { CardProps } from './Card.types';
+import { useRouter } from 'next/router';
 
 function Card(props: CardProps) {
-  const { username, state, score, occupation, onDeleteUser, onUpdateUser } = props;
+  const { username, state, score, occupation, onDeleteUser, onUpdateUser, id } = props;
+
+  const router = useRouter();
+
+  const handleCardClick = () => {
+    router.push(`/user/${id}`);
+  };
 
   return (
     <StyledCard>
@@ -46,6 +53,9 @@ function Card(props: CardProps) {
         </button>
         <button className="button remove" onClick={onDeleteUser}>
           Deletar
+        </button>
+        <button className="button open" onClick={handleCardClick}>
+          Abrir
         </button>
       </div>
     </StyledCard>

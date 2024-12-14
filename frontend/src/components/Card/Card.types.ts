@@ -5,4 +5,5 @@ export type CardProps = {
   state: string;
   score: number;
   occupation: string;
+  id: string;
 };

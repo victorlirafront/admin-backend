@@ -55,7 +55,7 @@ export const StyledCard = styled.div`
     margin-top: 20px;
 
     .button {
-      width: 40%;
+      width: 30%;
       height: 30px;
       cursor: pointer;
       border: none;
@@ -77,6 +77,10 @@ export const StyledCard = styled.div`
         &:hover {
           background: #d87373;
         }
+      }
+
+      &.open {
+        background: #04cdec;
       }
     }
   }
