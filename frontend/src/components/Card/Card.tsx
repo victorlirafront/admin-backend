@@ -1,16 +1,13 @@
 import { AVATAR_MAN, STAR_ICON } from '@/constants/images';
 import { StyledCard } from './Card.styled';
 import Image from 'next/image';
-
-type CardProps = {
-  username: string;
-};
+import { CardProps } from './Card.types';
 
 function Card(props: CardProps) {
-  const { username } = props;
+  const { username, onDeleteUser } = props;
 
   return (
-    <StyledCard>
+    <StyledCard onClick={onDeleteUser}>
       <div className="info-wrapper">
         <div className="avatar-wrapper">
           <Image
