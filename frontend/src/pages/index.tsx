@@ -11,11 +11,21 @@ import { useDispatch } from 'react-redux';
 import { useAppSelector } from '@/redux/store';
 import UserAdmin from '@/components/UserAdmin/UserAdmin';
 import Modal from '@/components/Modal/Modal';
-import AddUserForm from '@/components/AddUserForm/AddUserForm';
+import AddUserForm from '@/components/UserForm/UserForm';
 
 export default function Home({ data }: HomeProps) {
+  const initialUser = {
+    id: '',
+    username: '',
+    score: 0,
+    state: '',
+    occupation: '',
+    method: '',
+  };
   const dispatch = useDispatch();
-  const [showModal, setShowModal] = useState(false);
+  const [showCreateUserModal, setShowCreateUserModal] = useState(false);
+  const [currentUser, setCurrentUser] = useState(initialUser);
+
   const userCollection = useAppSelector((state) => state.usersReducer.users);
   const isUserCollectionValid = userCollection.length > 0;
 
@@ -34,12 +44,19 @@ export default function Home({ data }: HomeProps) {
     }
   };
 
+  const updateUser = (user: User) => {
+    const updatedUser = { ...user, method: 'PUT' };
+    setCurrentUser(updatedUser);
+    setShowCreateUserModal(true);
+  };
+
   const closeModalHandler = () => {
-    setShowModal(false);
+    setShowCreateUserModal(false);
+    setCurrentUser(initialUser);
   };
 
   const onOpenAddUserForm = () => {
-    setShowModal((prev) => !prev);
+    setShowCreateUserModal(true);
   };
 
   return (
@@ -51,8 +68,8 @@ export default function Home({ data }: HomeProps) {
         <link rel="icon" href={FAVICON} />
       </Head>
 
-      <Modal className={showModal ? 'active' : ''} closeModal={closeModalHandler}>
-        <AddUserForm />
+      <Modal className={showCreateUserModal ? 'active' : ''} closeModal={closeModalHandler}>
+        <AddUserForm user={currentUser} onCloseModal={closeModalHandler} />
       </Modal>
 
       <div className="main">
@@ -66,6 +83,7 @@ export default function Home({ data }: HomeProps) {
                 return (
                   <Card
                     onDeleteUser={() => deleteUser(user.id)}
+                    onUpdateUser={() => updateUser(user)}
                     username={user.username}
                     key={user.id}
                     state={user.state}

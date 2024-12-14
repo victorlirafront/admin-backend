@@ -2,7 +2,7 @@ export type User = {
   id: string;
   username: string;
   score: number;
-  createdAt: string;
+  createdAt?: string;
   state: string;
   occupation: string;
 };
