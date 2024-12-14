@@ -7,7 +7,9 @@ import {
   ParseIntPipe,
   Post,
   Put,
+  Query,
 } from '@nestjs/common';
+import { User } from 'src/typeorm/entities/User';
 import { CreateUserDto } from 'src/users/dtos/CreateUser.dto';
 import { UpdateUserDto } from 'src/users/dtos/UpdateUser.dto';
 import { UsersService } from 'src/users/services/users/users.service';
@@ -38,5 +40,10 @@ export class UsersController {
   @Delete(':id')
   async deleteUserById(@Param('id', ParseIntPipe) id: number) {
     await this.userService.deleteUser(id);
+  }
+
+  @Get('search')
+  async search(@Query('q') searchTerm: string): Promise<User[]> {
+    return this.userService.searchUsers(searchTerm);
   }
 }
