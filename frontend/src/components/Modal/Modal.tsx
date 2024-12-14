@@ -30,7 +30,7 @@ const Modal = function (props: IModalProps) {
             data-aos="fade-down"
           />
         </div>
-        <div>{children}</div>
+        {children}
       </StyledModal>
     </StyledModalWrapper>
   );

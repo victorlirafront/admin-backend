@@ -18,11 +18,10 @@ export const StyledModal = styled.div`
   right: 50%;
   top: 50%;
   transform: translate(50%, -250%) !important;
-  height: 300px;
 
   &.onDomLoad {
     transform: translateY(-100%);
-    transition: 0.9s;
+    transition: 0.4s;
   }
 
   @media screen and (max-width: 1035px) {
@@ -39,7 +38,7 @@ export const StyledModal = styled.div`
     position: fixed;
     transform: translateY(0%);
     opacity: 1;
-    transition: 0.9s;
+    transition: 0.4s;
     visibility: visible;
     right: 50%;
     top: 50%;
@@ -83,7 +82,7 @@ export const StyledModalWrapper = styled.div`
   right: 50%;
   transform: translate(50%, -50%);
   background-color: rgba(0, 0, 0, 0.4);
-  transition: 0.6s;
+  transition: 0.4s;
 
   &.active {
     display: block;
