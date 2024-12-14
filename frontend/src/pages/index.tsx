@@ -3,9 +3,13 @@ import CardsWrapper from '@/components/CardsWrapper/CardsWrapper';
 import { FAVICON } from '@/constants/images';
 import Head from 'next/head';
 import { useAppSelector } from '@/redux/store';
+import axios from 'axios';
+import { HomeProps, User } from './types';
+import { API_END_POINT } from '@/constants/endpoints';
 
-export default function Home() {
-  const username = useAppSelector((state) => state.usersReducer.users[0].username);
+export default function Home({ data }: HomeProps) {
+  const username = useAppSelector((state) => state.usersReducer.users[0]?.username);
+  const hasValidUserCollection = data.length > 0;
 
   return (
     <>
@@ -17,17 +21,31 @@ export default function Home() {
       </Head>
       <div className="main">
         <CardsWrapper>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {!hasValidUserCollection ? (
+            <h1 style={{ color: 'red' }}>Ouve um erro ao buscas os usuários</h1>
+          ) : (
+            data.map((user) => {
+              return <Card key={user.id} />;
+            })
+          )}
         </CardsWrapper>
       </div>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  try {
+    const response = await axios.get(API_END_POINT);
+    const data: User[] = response.data;
+
+    return {
+      props: { data },
+    };
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return {
+      props: { data: [] },
+    };
+  }
 }
