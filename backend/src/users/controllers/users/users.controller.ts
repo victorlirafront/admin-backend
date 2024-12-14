@@ -46,4 +46,9 @@ export class UsersController {
   async search(@Query('q') searchTerm: string): Promise<User[]> {
     return this.userService.searchUsers(searchTerm);
   }
+
+  @Get(':id')
+  async findUserById(@Param('id') id: number): Promise<User> {
+    return this.userService.findById(id);
+  }
 }
