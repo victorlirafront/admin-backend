@@ -8,11 +8,19 @@ export const StyledCardsWrapper = styled.div`
   justify-content: center;
 
   .container {
+    max-width: 1400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    gap: 20px;
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
+    }
   }
 `;

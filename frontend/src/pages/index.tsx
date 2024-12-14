@@ -9,6 +9,7 @@ import { setUsers } from '@/redux/features/users-slice/users-slice';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from '@/redux/store';
+import UserAdmin from '@/components/UserAdmin/UserAdmin';
 
 export default function Home({ data }: HomeProps) {
   const dispatch = useDispatch();
@@ -40,22 +41,25 @@ export default function Home({ data }: HomeProps) {
       </Head>
       <div className="main">
         <CardsWrapper>
-          {!isUserCollectionValid ? (
-            <h1 style={{ color: 'red' }}>Houve um erro ao buscar os usuários</h1>
-          ) : (
-            userCollection.map((user) => {
-              return (
-                <Card
-                  onDeleteUser={() => deleteUser(user.id)}
-                  username={user.username}
-                  key={user.id}
-                  state={user.state}
-                  score={user.score}
-                  occupation={user.occupation}
-                />
-              );
-            })
-          )}
+          <UserAdmin />
+          <div className="cards-container">
+            {!isUserCollectionValid ? (
+              <h1 style={{ color: 'red' }}>Houve um erro ao buscar os usuários</h1>
+            ) : (
+              userCollection.map((user) => {
+                return (
+                  <Card
+                    onDeleteUser={() => deleteUser(user.id)}
+                    username={user.username}
+                    key={user.id}
+                    state={user.state}
+                    score={user.score}
+                    occupation={user.occupation}
+                  />
+                );
+              })
+            )}
+          </div>
         </CardsWrapper>
       </div>
     </>
