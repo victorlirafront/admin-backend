@@ -6,13 +6,15 @@ import axios from 'axios';
 import { HomeProps, User } from './types';
 import { API_END_POINT } from '@/constants/endpoints';
 import { setUsers } from '@/redux/features/users-slice/users-slice';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from '@/redux/store';
 import UserAdmin from '@/components/UserAdmin/UserAdmin';
+import Modal from '@/components/Modal/Modal';
 
 export default function Home({ data }: HomeProps) {
   const dispatch = useDispatch();
+  const [showModal, setShowModal] = useState(true);
   const userCollection = useAppSelector((state) => state.usersReducer.users);
   const isUserCollectionValid = userCollection.length > 0;
 
@@ -31,6 +33,10 @@ export default function Home({ data }: HomeProps) {
     }
   };
 
+  const closeModalHandler = () => {
+    setShowModal(false);
+  };
+
   return (
     <>
       <Head>
@@ -39,6 +45,11 @@ export default function Home({ data }: HomeProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={FAVICON} />
       </Head>
+
+      <Modal className={showModal ? 'active' : ''} closeModal={closeModalHandler}>
+        <h1></h1>
+      </Modal>
+
       <div className="main">
         <CardsWrapper>
           <UserAdmin />
