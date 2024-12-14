@@ -12,8 +12,20 @@ export const StyledHeader = styled.header`
     max-width: 1400px;
     margin: 0 auto;
 
-    .paper-plane-icon {
-      transform: rotate(8deg);
+    .paper-plane-wrapper {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .paper-plane-icon {
+        transform: rotate(8deg);
+        margin-right: 10px;
+      }
+
+      .home {
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
     }
 
     .header-menu-list {
