@@ -1,18 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_END_POINT } from '@/constants/endpoints';
 import { useDispatch } from 'react-redux';
 import { setUsers } from '@/redux/features/users-slice/users-slice';
 import { useAppSelector } from '@/redux/store';
-import StyledAddUserForm from './AddUserForm.styled';
+import StyledUserForm from './UserForm.styled';
+import { UserFormProps } from './UserForm.type';
 
-function AddUserForm() {
+function AddUserForm(props: UserFormProps) {
   const [username, setUsername] = useState('');
-  const [score, setScore] = useState('');
+  const [score, setScore] = useState(0);
   const [state, setState] = useState('');
   const [occupation, setOccupation] = useState('');
   const dispatch = useDispatch();
   const userCollection = useAppSelector((state) => state.usersReducer.users);
+  const { user, onCloseModal } = props;
+
+  useEffect(() => {
+    if (user.username) {
+      setUsername(user.username);
+      setScore(user.score);
+      setOccupation(user.occupation);
+      setState(user.state);
+    }
+  }, [user]);
 
   const sendNewUser = async () => {
     if (!username || !score || !state || !occupation) {
@@ -22,24 +33,52 @@ function AddUserForm() {
 
     const newUser = { username, score, state, occupation };
 
-    try {
-      const response = await axios.post(`${API_END_POINT}/users`, newUser, {
-        headers: { 'Content-Type': 'application/json' },
-      });
+    const sendUserRequest = async (
+      method: string,
+      newUser: { username: string; score: number; state: string; occupation: string },
+    ) => {
+      const url = `${API_END_POINT}/users`;
+      const userId = user.id;
+      const headers = { 'Content-Type': 'application/json' };
 
-      dispatch(setUsers([...userCollection, response.data]));
+      try {
+        const response =
+          method === 'PUT'
+            ? await axios.put(`${url}/${userId}`, newUser, { headers })
+            : await axios.post(url, newUser, { headers });
 
-      setUsername('');
-      setScore('');
-      setState('');
-      setOccupation('');
-    } catch (error) {
-      console.error('Erro ao criar um novo usuário:', error);
-    }
+        if (method === 'PUT') {
+          const updatedUsers = userCollection.map((user) =>
+            user.id === userId
+              ? {
+                  ...user,
+                  username,
+                  score,
+                  state,
+                  occupation,
+                }
+              : user,
+          );
+          dispatch(setUsers(updatedUsers));
+        } else {
+          dispatch(setUsers([...userCollection, response.data]));
+        }
+
+        setUsername('');
+        setScore(0);
+        setState('');
+        setOccupation('');
+      } catch (error) {
+        console.error('Erro ao criar ou atualizar o usuário:', error);
+      }
+    };
+
+    sendUserRequest(user.method, newUser);
+    onCloseModal();
   };
 
   return (
-    <StyledAddUserForm action="POST">
+    <StyledUserForm action="POST">
       <div className="inputs-container">
         <div className="form-control">
           <label htmlFor="">Nome do usuário</label>
@@ -53,10 +92,10 @@ function AddUserForm() {
         <div className="form-control">
           <label htmlFor="">Pontuação</label>
           <input
-            type="number"
+            type="text"
             placeholder="Ex: 5"
             value={score}
-            onChange={(e) => setScore(e.target.value)}
+            onChange={(e) => setScore(Number(e.target.value))}
           />
         </div>
         <div className="form-control">
@@ -81,7 +120,7 @@ function AddUserForm() {
       <button className="add-user-btn" type="button" onClick={sendNewUser}>
         Adicionar
       </button>
-    </StyledAddUserForm>
+    </StyledUserForm>
   );
 }
 

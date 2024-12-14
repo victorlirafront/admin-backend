@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledAddUserForm = styled.form`
+const StyledUserForm = styled.form`
   width: 100%;
   padding: 40px;
   .inputs-container {
@@ -50,4 +50,4 @@ const StyledAddUserForm = styled.form`
   }
 `;
 
-export default StyledAddUserForm;
+export default StyledUserForm;
