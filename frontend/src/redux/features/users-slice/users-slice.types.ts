@@ -7,4 +7,5 @@ export type UsersCollectionState = {
   state: string;
   score: number;
   id: string;
+  occupation: string;
 };

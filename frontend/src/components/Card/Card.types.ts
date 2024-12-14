@@ -3,4 +3,5 @@ export type CardProps = {
   onDeleteUser: () => void;
   state: string;
   score: number;
+  occupation: string;
 };

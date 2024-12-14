@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { CardProps } from './Card.types';
 
 function Card(props: CardProps) {
-  const { username, state, score, onDeleteUser } = props;
+  const { username, state, score, occupation, onDeleteUser } = props;
 
   return (
     <StyledCard onClick={onDeleteUser}>
@@ -32,7 +32,7 @@ function Card(props: CardProps) {
               <p>{score}</p>
             </div>
             <div className="profile-item">
-              <p>Estudante</p>
+              <p>{occupation}</p>
             </div>
             <div className="profile-item">
               <p>{state}</p>

@@ -51,6 +51,7 @@ export default function Home({ data }: HomeProps) {
                   key={user.id}
                   state={user.state}
                   score={user.score}
+                  occupation={user.occupation}
                 />
               );
             })

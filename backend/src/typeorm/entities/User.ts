@@ -20,4 +20,7 @@ export class User {
 
   @Column()
   state: string;
+
+  @Column()
+  occupation: string;
 }

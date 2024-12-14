@@ -4,6 +4,7 @@ export type User = {
   score: number;
   createdAt: string;
   state: string;
+  occupation: string;
 };
 
 export type HomeProps = {
