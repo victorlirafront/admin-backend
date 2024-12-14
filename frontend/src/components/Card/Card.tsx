@@ -2,7 +2,13 @@ import { AVATAR_MAN, STAR_ICON } from '@/constants/images';
 import { StyledCard } from './Card.styled';
 import Image from 'next/image';
 
-function Card() {
+type CardProps = {
+  username: string;
+};
+
+function Card(props: CardProps) {
+  const { username } = props;
+
   return (
     <StyledCard>
       <div className="info-wrapper">
@@ -16,7 +22,7 @@ function Card() {
           />
         </div>
         <div className="profile-informations-wrapper">
-          <h1>Felipe</h1>
+          <h1>{username}</h1>
           <div className="profile-informations">
             <div className="profile-item">
               <Image
