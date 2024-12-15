@@ -71,7 +71,7 @@ GET /users/search?q={query}
 ```
 ---
 
-## 🔧 Configuração do Projeto
+## 🚀 Executando o Projeto Localmente
 
 ### 1. Clone o Repositório
 
