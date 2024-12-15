@@ -121,7 +121,7 @@ function UserForm(props: UserFormProps) {
         </div>
       </div>
       <button className="add-user-btn" type="button" onClick={sendNewUser}>
-        Adicionar
+        Enviar
       </button>
     </StyledUserForm>
   );
