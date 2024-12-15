@@ -36,30 +36,44 @@ Aqui está uma versão melhor formatada:
 Acesse a API através do link:  
 https://bossa-nova-solutions-challenge-production.up.railway.app
 
-### Endpoint para buscar usuários
+Aqui está uma versão melhorada da estrutura, com explicações e detalhes adicionais:
+
+### Endpoints para interação com a API
+
+- **Buscar todos os usuários**
 
 ```bash
 GET /users
 ```
-
-### Endpoint atualizar um usuário
-
-```bash
-PUT /users/id
-```
-
-### Endpoint deletar um usuário
+- **Buscar usuários específico**
 
 ```bash
-DELETE /users/id
+GET /users/{id}
 ```
-### Endpoint criar um usuário
+
+- **Criar novo usuário**
 
 ```bash
 POST /users
 ```
 
+- **Atualizar informações de um usuário específico**
 
+```bash
+PUT /users/{id}
+```
+
+- **Deletar usuário**
+
+```bash
+DELETE /users/{id}
+```
+
+- **Buscar usuário específico**
+
+```bash
+GET /users/search?q={query}
+```
 ---
 
 ## 🔧 Configuração do Projeto
