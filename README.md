@@ -2,7 +2,7 @@
 
 Este é um projeto fullstack de gestão de usuários. O **frontend** foi construído com **Next.js**, **TypeScript**, **Redux** e **Styled-components**, enquanto o **backend** foi desenvolvido utilizando **NestJS** e **TypeORM**. O banco de dados **MySQL** está hospedado na nuvem utilizando o **Clever Cloud**.
 
-![Servidor Backend Rodando](https://ik.imagekit.io/Victorliradev/bossa-nova-solutions/Captura%20de%20Tela%202024-12-15%20a%CC%80s%2000.50.05_70xZl4Slf.png?updatedAt=1734234635498)
+![Servidor Backend Rodando](https://img.wine.com.br/testes/2022/27-12/banner.gif)
 
 ## 🧰 Tecnologias Utilizadas no Projeto
 
