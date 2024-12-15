@@ -1,9 +1,17 @@
 import { GetServerSideProps } from 'next';
 import axios from 'axios';
 import { API_DEVELOPMENT_ENDPOINT, API_PRODUCTION_ENDPOINT } from '@/constants/endpoints';
-import { User } from '../types';
 import StyledUser, { Footer, ProfileHeader, ProfileInfo, Quote } from './User.styled';
 import getGreeting from '@/helpers/getGreeting';
+
+export type User = {
+  id: string;
+  username: string;
+  score: string;
+  createdAt?: string;
+  state: string;
+  occupation: string;
+};
 
 interface UserPageProps {
   user: User;

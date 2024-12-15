@@ -3,7 +3,6 @@ import CardsWrapper from '@/components/CardsWrapper/CardsWrapper';
 import { FAVICON } from '@/constants/images';
 import Head from 'next/head';
 import axios from 'axios';
-import { HomeProps, User } from './types';
 import { API_DEVELOPMENT_ENDPOINT, API_PRODUCTION_ENDPOINT } from '@/constants/endpoints';
 import { setUsers } from '@/redux/features/users-slice/users-slice';
 import React, { useEffect, useState } from 'react';
@@ -13,6 +12,19 @@ import UserAdmin from '@/components/UserAdmin/UserAdmin';
 import Modal from '@/components/Modal/Modal';
 import AddUserForm from '@/components/UserForm/UserForm';
 import { initialUser } from '@/constants/initializers';
+
+type User = {
+  id: string;
+  username: string;
+  score: string;
+  createdAt?: string;
+  state: string;
+  occupation: string;
+};
+
+type HomeProps = {
+  data: User[];
+};
 
 export default function Home({ data }: HomeProps) {
   const dispatch = useDispatch();
