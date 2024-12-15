@@ -9,7 +9,7 @@ import { UserFormProps } from './UserForm.type';
 
 function AddUserForm(props: UserFormProps) {
   const [username, setUsername] = useState('');
-  const [score, setScore] = useState("'");
+  const [score, setScore] = useState('');
   const [state, setState] = useState('');
   const [occupation, setOccupation] = useState('');
   const dispatch = useDispatch();
@@ -17,12 +17,10 @@ function AddUserForm(props: UserFormProps) {
   const { user, onCloseModal } = props;
 
   useEffect(() => {
-    if (user.username) {
-      setUsername(user.username);
-      setScore(user.score);
-      setOccupation(user.occupation);
-      setState(user.state);
-    }
+    setUsername(user.username);
+    setScore(user.score);
+    setOccupation(user.occupation);
+    setState(user.state);
   }, [user]);
 
   const sendNewUser = async () => {
