@@ -31,8 +31,17 @@ export const StyledCard = styled.div`
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         width: 70px;
         height: 70px;
+        @media screen and (max-width: 500px) {
+          margin-right: 10px;
+          width: 60px;
+          height: 60px;
+        }
       }
       margin-right: 30px;
+
+      @media screen and (max-width: 500px) {
+        margin-right: 10px;
+      }
     }
 
     .profile-informations-wrapper {
@@ -62,6 +71,13 @@ export const StyledCard = styled.div`
 
           &:not(:last-child) {
             margin-right: 20px;
+          }
+
+          img {
+            @media screen and (max-width: 490px) {
+              height: 15px;
+              width: auto;
+            }
           }
         }
       }

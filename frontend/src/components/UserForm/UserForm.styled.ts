@@ -3,6 +3,11 @@ import styled from 'styled-components';
 const StyledUserForm = styled.form`
   width: 100%;
   padding: 40px;
+
+  @media screen and (max-width: 500px) {
+    padding: 10px;
+  }
+
   .inputs-container {
     width: 100%;
     .form-control {
@@ -11,8 +16,16 @@ const StyledUserForm = styled.form`
       flex-direction: column;
       width: 100%;
       margin-top: 30px;
+
+      @media screen and (max-width: 500px) {
+        margin-top: 10px;
+      }
+
       label {
         color: #6b7280;
+        @media screen and (max-width: 500px) {
+          font-size: 12px;
+        }
       }
 
       input {
@@ -27,6 +40,10 @@ const StyledUserForm = styled.form`
         color: #6b7280;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         border: 1px solid #e9e9e9;
+
+        @media screen and (max-width: 500px) {
+          font-size: 12px;
+        }
       }
     }
   }
