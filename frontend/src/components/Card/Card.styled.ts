@@ -10,6 +10,11 @@ export const StyledCard = styled.div`
   background: #fff;
   transition: 0.1s ease-in-out;
 
+  @media screen and (max-width: 490px) {
+    width: 90%;
+    margin: 10px 0px;
+  }
+
   &:hover {
     border: 1px solid #06aec8;
     transform: scale(1.05);
@@ -26,14 +31,27 @@ export const StyledCard = styled.div`
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         width: 70px;
         height: 70px;
+        @media screen and (max-width: 500px) {
+          margin-right: 10px;
+          width: 60px;
+          height: 60px;
+        }
       }
       margin-right: 30px;
+
+      @media screen and (max-width: 500px) {
+        margin-right: 10px;
+      }
     }
 
     .profile-informations-wrapper {
       h1 {
         font-size: 20px;
         color: #6b7280;
+
+        @media screen and (max-width: 490px) {
+          font-size: 16px;
+        }
       }
       .profile-informations {
         display: flex;
@@ -43,12 +61,23 @@ export const StyledCard = styled.div`
           align-items: center;
           color: #6b7280;
 
+          @media screen and (max-width: 490px) {
+            font-size: 12px;
+          }
+
           .star-icon {
             margin-right: 5px;
           }
 
           &:not(:last-child) {
             margin-right: 20px;
+          }
+
+          img {
+            @media screen and (max-width: 490px) {
+              height: 15px;
+              width: auto;
+            }
           }
         }
       }
@@ -72,6 +101,10 @@ export const StyledCard = styled.div`
       text-transform: uppercase;
       font-size: 11px;
       color: #fff;
+
+      @media screen and (max-width: 490px) {
+        font-size: 8px;
+      }
 
       &.edit {
         background: #1cc695;

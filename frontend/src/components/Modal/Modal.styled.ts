@@ -68,6 +68,11 @@ export const StyledModal = styled.div`
       max-width: 20px;
       max-height: 20px;
       cursor: pointer;
+
+      @media screen and (max-width: 500px) {
+        max-width: 10px;
+        max-height: 10px;
+      }
     }
   }
 `;

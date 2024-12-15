@@ -17,6 +17,11 @@ export const StyledUserAdmin = styled.div`
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
 
+      @media screen and (max-width: 1330px) {
+        width: 100%;
+        margin-right: 10px;
+      }
+
       #search {
         flex: 1;
         border: none;
@@ -36,10 +41,19 @@ export const StyledUserAdmin = styled.div`
           font-size: 16px;
           font-style: italic;
           transition: color 0.3s ease;
+          @media screen and (max-width: 768px) {
+            padding: 10px;
+            font-size: 12px;
+          }
         }
 
         &:focus::placeholder {
           color: #d0d0d0;
+        }
+
+        @media screen and (max-width: 768px) {
+          padding: 10px;
+          font-size: 12px;
         }
       }
 
@@ -59,8 +73,16 @@ export const StyledUserAdmin = styled.div`
         background: #f3f3f3;
         transition: 0.3s;
         cursor: pointer;
+
         &:hover {
           background: #e8e7e7;
+        }
+
+        .search-icon {
+          @media screen and (max-width: 768px) {
+            height: 25px;
+            width: auto;
+          }
         }
       }
     }
@@ -78,6 +100,11 @@ export const StyledUserAdmin = styled.div`
 
       &:hover {
         background: #0392a9;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        font-size: 8px;
       }
     }
   }

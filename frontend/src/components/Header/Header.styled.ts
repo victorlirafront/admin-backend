@@ -3,7 +3,10 @@ import styled from 'styled-components';
 export const StyledHeader = styled.header`
   background: #1cc695;
   color: #fff;
-  padding: 10px 0;
+  padding: 10px 20px;
+  @media screen and (max-width: 768px) {
+    padding: 10px 10px;
+  }
 
   .container {
     display: flex;
@@ -20,11 +23,22 @@ export const StyledHeader = styled.header`
       .paper-plane-icon {
         transform: rotate(8deg);
         margin-right: 10px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+          height: 30px;
+          width: auto;
+        }
       }
 
       .home {
         font-weight: bolder;
         text-transform: uppercase;
+        font-size: 14px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
       }
     }
 
@@ -40,6 +54,10 @@ export const StyledHeader = styled.header`
         font-weight: bolder;
         font-size: 14px;
         cursor: pointer;
+
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+        }
 
         &.selected {
           color: #fff;

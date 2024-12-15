@@ -1,4 +1,3 @@
-// src/config/config.ts
 export const config = {
   development: {
     API_END_POINT: 'http://localhost:3002',
