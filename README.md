@@ -24,6 +24,8 @@ Este é um projeto fullstack de gestão de usuários. Decidi desenvolver minha p
 - **TypeScript**
 - **Redux**
 - **Styled-components**
+- **ESLint**: Ferramenta de linting para identificar e corrigir padrões de código.
+- **Prettier**: Formatação automática de código para garantir consistência.
 
 ### Backend
 - **NestJS**
