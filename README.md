@@ -7,7 +7,7 @@ Este é um projeto fullstack de gestão de usuários. O **frontend** foi constru
 ![Servidor Backend Rodando](https://ik.imagekit.io/Victorliradev/bossa-nova-solutions/Captura%20de%20Tela%202024-12-15%20a%CC%80s%2000.50.05_70xZl4Slf.png?updatedAt=1734234635498)
 
 
-## 🧰 Tecnologias usadas no projeto
+## 🧰 Tecnologias Utilizadas no Projeto
 
 ### Frontend
 - **Next.js / React**
