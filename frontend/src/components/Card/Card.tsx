@@ -3,6 +3,7 @@ import { StyledCard } from './Card.styled';
 import Image from 'next/image';
 import { CardProps } from './Card.types';
 import { useRouter } from 'next/router';
+import reduceText from '@/helpers/truncText';
 
 function Card(props: CardProps) {
   const { username, state, score, occupation, onDeleteUser, onUpdateUser, id } = props;
@@ -26,7 +27,7 @@ function Card(props: CardProps) {
           />
         </div>
         <div className="profile-informations-wrapper">
-          <h1>{username}</h1>
+          <h1>{reduceText(username, 12)}</h1>
           <div className="profile-informations">
             <div className="profile-item">
               <Image
@@ -36,13 +37,13 @@ function Card(props: CardProps) {
                 width={20}
                 alt="ícone de estrela"
               />
-              <p>{score}</p>
+              <p>{reduceText(score, 2)}</p>
             </div>
             <div className="profile-item">
-              <p>{occupation}</p>
+              <p>{reduceText(occupation, 13)}</p>
             </div>
             <div className="profile-item">
-              <p>{state}</p>
+              <p>{reduceText(state, 2)}</p>
             </div>
           </div>
         </div>

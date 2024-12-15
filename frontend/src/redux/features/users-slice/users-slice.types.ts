@@ -5,7 +5,7 @@ export type InitialState = {
 export type UsersCollectionState = {
   username: string;
   state: string;
-  score: number;
+  score: string;
   id: string;
   occupation: string;
 };

@@ -3,7 +3,7 @@ export type CardProps = {
   onDeleteUser: () => void;
   onUpdateUser: () => void;
   state: string;
-  score: number;
+  score: string;
   occupation: string;
   id: string;
 };

@@ -25,7 +25,9 @@ function Header() {
         </div>
 
         <ul className="header-menu-list">
-          <li className="header-menu-list-item selected">Voluntários</li>
+          <li className="header-menu-list-item selected" onClick={handleHomeClick}>
+            Voluntários
+          </li>
         </ul>
       </div>
     </StyledHeader>

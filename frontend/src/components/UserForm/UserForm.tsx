@@ -9,7 +9,7 @@ import { UserFormProps } from './UserForm.type';
 
 function AddUserForm(props: UserFormProps) {
   const [username, setUsername] = useState('');
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState("'");
   const [state, setState] = useState('');
   const [occupation, setOccupation] = useState('');
   const dispatch = useDispatch();
@@ -35,7 +35,7 @@ function AddUserForm(props: UserFormProps) {
 
     const sendUserRequest = async (
       method: string,
-      newUser: { username: string; score: number; state: string; occupation: string },
+      newUser: { username: string; score: string; state: string; occupation: string },
     ) => {
       const url = `${API_END_POINT}/users`;
       const userId = user.id;
@@ -65,7 +65,7 @@ function AddUserForm(props: UserFormProps) {
         }
 
         setUsername('');
-        setScore(0);
+        setScore('');
         setState('');
         setOccupation('');
       } catch (error) {
@@ -95,7 +95,7 @@ function AddUserForm(props: UserFormProps) {
             type="text"
             placeholder="Ex: 5"
             value={score}
-            onChange={(e) => setScore(Number(e.target.value))}
+            onChange={(e) => setScore(String(e.target.value))}
           />
         </div>
         <div className="form-control">

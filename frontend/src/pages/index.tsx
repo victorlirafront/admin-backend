@@ -17,7 +17,7 @@ export default function Home({ data }: HomeProps) {
   const initialUser = {
     id: '',
     username: '',
-    score: 0,
+    score: '',
     state: '',
     occupation: '',
     method: '',
@@ -88,7 +88,7 @@ export default function Home({ data }: HomeProps) {
                     username={user.username}
                     key={user.id}
                     state={user.state}
-                    score={user.score}
+                    score={String(user.score)}
                     occupation={user.occupation}
                   />
                 );
