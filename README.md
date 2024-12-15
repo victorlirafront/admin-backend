@@ -34,13 +34,31 @@ Aqui está uma versão melhor formatada:
 ## API Criada e Hospedada na Railway
 
 Acesse a API através do link:  
-[API na Railway](https://bossa-nova-solutions-challenge-production.up.railway.app)
+https://bossa-nova-solutions-challenge-production.up.railway.app
 
-### Endpoint para Retornar Usuários
+### Endpoint para buscar usuários
 
 ```bash
 GET /users
 ```
+
+### Endpoint atualizar um usuário
+
+```bash
+PUT /users/id
+```
+
+### Endpoint deletar um usuário
+
+```bash
+DELETE /users/id
+```
+### Endpoint criar um usuário
+
+```bash
+POST /users
+```
+
 
 ---
 
