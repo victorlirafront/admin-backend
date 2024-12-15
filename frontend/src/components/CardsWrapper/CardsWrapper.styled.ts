@@ -16,6 +16,10 @@ export const StyledCardsWrapper = styled.div`
     flex-wrap: wrap;
     margin: 100px 0 100px 0;
 
+    @media screen and (max-width: 768px) {
+      margin: 50px 0 50px 0;
+    }
+
     .cards-container {
       display: flex;
       flex-wrap: wrap;
