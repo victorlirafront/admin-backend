@@ -6,7 +6,7 @@ Este é um projeto fullstack de gestão de usuários. Decidi desenvolver minha p
 
 <br/>
 
-<a href="https://bossa-nova-solutions-challenge-ovoi2wo4n.vercel.app/" target="_blank" style="font-size: 24px; font-weight: bold; text-decoration: none;">
+<a href="https://bossa-nova-solutions-challenge-ovoi2wo4n.vercel.app/" target="_blank" >
   ---->  Deploy -> Bossa Nova Challenge <----
 </a>
 
