@@ -1,6 +1,9 @@
 # 🌐 Aplicação Fullstack de Gestão de Usuários
 
-Este é um projeto fullstack de gestão de usuários. O **frontend** foi construído com **Next.js**, **TypeScript**, **Redux** e **Styled-components**, enquanto o **backend** foi desenvolvido utilizando **NestJS** e **TypeORM**. O banco de dados **MySQL** está hospedado na nuvem utilizando o **Clever Cloud**.
+Este é um projeto fullstack de gestão de usuários. Decidi desenvolver minha própria API para ter mais flexibilidade e controle sobre os métodos HTTP. Tanto o frontend quanto o backend foram criados por mim e estão hospedados. No entanto, caso queira rodar o projeto localmente, deixei um README detalhado com todas as instruções necessárias.
+
+### Deploy da aplicação --> https://bossa-nova-solutions-challenge-ovoi2wo4n.vercel.app/
+<br/>
 
 ![Servidor Backend Rodando](https://img.wine.com.br/testes/2022/27-12/banner.gif)
 
@@ -22,7 +25,6 @@ Este é um projeto fullstack de gestão de usuários. O **frontend** foi constru
 
 ### Testes Automatizados
 - **Jest**
-- **Cypress**
 
 ---
 
@@ -30,8 +32,6 @@ Este é um projeto fullstack de gestão de usuários. O **frontend** foi constru
 
 Acesse a API através do link:  
 https://bossa-nova-solutions-challenge-production.up.railway.app
-
-Aqui está uma versão melhorada da estrutura, com explicações e detalhes adicionais:
 
 ### Endpoints para interação com a API
 
@@ -115,7 +115,6 @@ Esse comando irá mapear as rotas da nossa API. A seguinte mensagem aparecerá n
 
 ![Servidor Backend Rodando](https://ik.imagekit.io/Victorliradev/bossa-nova-solutions/Captura%20de%20Tela%202024-12-15%20a%CC%80s%2000.13.11_Ywv_Aaw76.png?updatedAt=1734232439790)
 
-Certifique-se de que todos os testes foram aprovados, conforme mostrado no exemplo acima.
 <br/>
 
 Agora que o servidor está rodando, o próximo passo é iniciar o **frontend**. Se você ainda estiver dentro da pasta **backend**, volte para o diretório raiz:
@@ -175,6 +174,8 @@ Watch Usage
 Para rodar todos os testes, pressione **a** no terminal.
 
 ![](https://ik.imagekit.io/Victorliradev/bossa-nova-solutions/Captura%20de%20Tela%202024-12-15%20a%CC%80s%2014.35.23_zC7TGWHqOl.png?updatedAt=1734284154935)
+
+Certifique-se de que todos os testes foram aprovados, conforme mostrado no exemplo acima.
 
 ## Variáveis de Ambiente
 
