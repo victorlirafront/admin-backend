@@ -27,8 +27,6 @@ Este é um projeto fullstack de gestão de usuários. O **frontend** foi constru
 - **Jest**
 - **Cypress**
 
-Aqui está uma versão melhor formatada:
-
 ---
 
 ## API Criada e Hospedada na Railway
