@@ -2,7 +2,6 @@ import { render, screen } from '@testing-library/react';
 import Layout from './Layout';
 import { ReduxProvider } from '@/redux/provider';
 
-// Mock do Header e Footer
 jest.mock('@/components/Header/Header', () => ({
   __esModule: true,
   default: () => <div>Header</div>,
