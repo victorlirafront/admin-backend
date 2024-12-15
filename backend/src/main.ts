@@ -6,7 +6,7 @@ async function bootstrap() {
   try {
     const app = await NestFactory.create(AppModule);
     const ENVIRONMENT = process.env.ENVIRONMENT || 'development';
-    const { CORS_ORIGIN, SERVER_URL } = config[ENVIRONMENT];
+    const { SERVER_URL } = config[ENVIRONMENT];
 
     app.enableCors({
       origin: '*',
