@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import { useAppSelector } from '@/redux/store';
 import UserAdmin from '@/components/UserAdmin/UserAdmin';
 import Modal from '@/components/Modal/Modal';
-import AddUserForm from '@/components/UserForm/UserForm';
+import UserForm from '@/components/UserForm/UserForm';
 import { initialUser } from '@/constants/initializers';
 
 type User = {
@@ -78,7 +78,7 @@ export default function Home({ data }: HomeProps) {
       </Head>
 
       <Modal className={showCreateUserModal ? 'active' : ''} closeModal={closeModalHandler}>
-        <AddUserForm user={currentUser} onCloseModal={closeModalHandler} />
+        <UserForm user={currentUser} onCloseModal={closeModalHandler} />
       </Modal>
 
       <div className="main">

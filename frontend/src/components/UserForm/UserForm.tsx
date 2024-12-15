@@ -7,7 +7,7 @@ import { useAppSelector } from '@/redux/store';
 import StyledUserForm from './UserForm.styled';
 import { UserFormProps } from './UserForm.type';
 
-function AddUserForm(props: UserFormProps) {
+function UserForm(props: UserFormProps) {
   const [username, setUsername] = useState('');
   const [score, setScore] = useState('');
   const [state, setState] = useState('');
@@ -127,4 +127,4 @@ function AddUserForm(props: UserFormProps) {
   );
 }
 
-export default AddUserForm;
+export default UserForm;
