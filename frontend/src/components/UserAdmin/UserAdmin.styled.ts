@@ -19,6 +19,7 @@ export const StyledUserAdmin = styled.div`
 
       @media screen and (max-width: 1330px) {
         width: 100%;
+        margin-right: 10px;
       }
 
       #search {

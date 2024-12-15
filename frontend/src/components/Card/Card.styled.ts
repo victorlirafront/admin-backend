@@ -10,6 +10,11 @@ export const StyledCard = styled.div`
   background: #fff;
   transition: 0.1s ease-in-out;
 
+  @media screen and (max-width: 490px) {
+    width: 90%;
+    margin: 10px 0px;
+  }
+
   &:hover {
     border: 1px solid #06aec8;
     transform: scale(1.05);
@@ -34,6 +39,10 @@ export const StyledCard = styled.div`
       h1 {
         font-size: 20px;
         color: #6b7280;
+
+        @media screen and (max-width: 490px) {
+          font-size: 16px;
+        }
       }
       .profile-informations {
         display: flex;
@@ -42,6 +51,10 @@ export const StyledCard = styled.div`
           display: flex;
           align-items: center;
           color: #6b7280;
+
+          @media screen and (max-width: 490px) {
+            font-size: 12px;
+          }
 
           .star-icon {
             margin-right: 5px;
@@ -72,6 +85,10 @@ export const StyledCard = styled.div`
       text-transform: uppercase;
       font-size: 11px;
       color: #fff;
+
+      @media screen and (max-width: 490px) {
+        font-size: 8px;
+      }
 
       &.edit {
         background: #1cc695;
