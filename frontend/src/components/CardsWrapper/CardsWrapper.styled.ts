@@ -21,6 +21,10 @@ export const StyledCardsWrapper = styled.div`
       flex-wrap: wrap;
       justify-content: center;
       margin-top: 50px;
+
+      .title-error {
+        color: #f08080;
+      }
     }
   }
 `;

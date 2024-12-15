@@ -69,7 +69,7 @@ export default function Home({ data }: HomeProps) {
           <UserAdmin onOpenAddUserForm={onOpenAddUserForm} />
           <div className="cards-container">
             {!isUserCollectionValid ? (
-              <h1 style={{ color: 'red' }}>Nenhum usuário foi encontrado</h1>
+              <h1 className="title-error">Nenhum usuário foi encontrado</h1>
             ) : (
               [...userCollection].reverse().map((user) => {
                 return (

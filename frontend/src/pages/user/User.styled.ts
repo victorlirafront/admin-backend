@@ -15,13 +15,13 @@ export const ProfileHeader = styled.div`
 
   h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #6b7280;
     margin-bottom: 10px;
   }
 
   p {
     font-size: 1.2rem;
-    color: #777;
+    color: #6b7280;
   }
 `;
 
@@ -38,12 +38,12 @@ export const ProfileInfo = styled.div`
 
   p {
     font-size: 1.1rem;
-    color: #444;
+    color: #6b7280;
     margin: 10px 0;
   }
 
   strong {
-    color: #333;
+    color: #6b7280;
   }
 `;
 
@@ -61,7 +61,7 @@ export const Quote = styled.blockquote`
   .quote-title {
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: #6b7280;
     margin-bottom: 10px;
   }
 `;

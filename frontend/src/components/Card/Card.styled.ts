@@ -33,6 +33,7 @@ export const StyledCard = styled.div`
     .profile-informations-wrapper {
       h1 {
         font-size: 20px;
+        color: #6b7280;
       }
       .profile-informations {
         display: flex;
@@ -40,6 +41,7 @@ export const StyledCard = styled.div`
         .profile-item {
           display: flex;
           align-items: center;
+          color: #6b7280;
 
           .star-icon {
             margin-right: 5px;
@@ -69,11 +71,12 @@ export const StyledCard = styled.div`
       font-weight: bolder;
       text-transform: uppercase;
       font-size: 11px;
+      color: #fff;
 
       &.edit {
-        background: lightgreen;
+        background: #1cc695;
         &:hover {
-          background: #82dc82;
+          background: #18b488;
         }
       }
 
@@ -85,7 +88,10 @@ export const StyledCard = styled.div`
       }
 
       &.open {
-        background: #04cdec;
+        background: #06aec8;
+        &:hover {
+          background: #039bb2;
+        }
       }
     }
   }

@@ -106,7 +106,7 @@ function AddUserForm(props: UserFormProps) {
           />
         </div>
         <div className="form-control">
-          <p>Ocupação</p>
+          <label htmlFor="">Ocupação</label>
           <input
             type="text"
             placeholder="Ex: Analista de dados"

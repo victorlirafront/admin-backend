@@ -11,6 +11,9 @@ const StyledUserForm = styled.form`
       flex-direction: column;
       width: 100%;
       margin-top: 30px;
+      label {
+        color: #6b7280;
+      }
 
       input {
         padding: 13px 20px;
@@ -21,7 +24,7 @@ const StyledUserForm = styled.form`
         margin-bottom: 20px;
         margin-top: 7px;
         font-size: 16px;
-        color: rgb(51, 51, 51);
+        color: #6b7280;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         border: 1px solid #e9e9e9;
       }
