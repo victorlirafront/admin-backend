@@ -34,7 +34,6 @@ export default function UserPage({ user }: UserPageProps) {
           <p>
             <strong>Pontuação:</strong> {user.score}
           </p>
-          <p>Citação do dia</p>
           <Quote>
             <p className="quote-title">Citação do dia</p>
             {`"Mesmo a menor das pessoas pode mudar o curso do futuro."`}
