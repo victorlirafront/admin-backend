@@ -2,10 +2,13 @@
 
 Este é um projeto fullstack de gestão de usuários. Decidi desenvolver minha própria API para ter mais flexibilidade e controle sobre os métodos HTTP. Tanto o frontend quanto o backend foram criados por mim e estão hospedados. No entanto, caso queira rodar o projeto localmente, deixei um README detalhado com todas as instruções necessárias.
 
-### Deploy da aplicação --> https://bossa-nova-solutions-challenge-ovoi2wo4n.vercel.app/
+### Deploy da aplicação: 
+<a href="https://bossa-nova-solutions-challenge-ovoi2wo4n.vercel.app/" target="_blank">
+  Deploy -> Bossa Nova Challenge
+</a>
 <br/>
 
-![Servidor Backend Rodando](https://img.wine.com.br/testes/2022/27-12/banner.gif)
+
 
 ## 🧰 Tecnologias Utilizadas no Projeto
 
@@ -31,7 +34,10 @@ Este é um projeto fullstack de gestão de usuários. Decidi desenvolver minha p
 ## API Criada e Hospedada na Railway
 
 Acesse a API através do link:  
-https://bossa-nova-solutions-challenge-production.up.railway.app
+
+<a href="https://bossa-nova-solutions-challenge-ovoi2wo4n.vercel.app/" target="_blank">
+  Deploy -> Bossa Nova API
+</a>
 
 ### Endpoints para interação com a API
 
