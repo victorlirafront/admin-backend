@@ -36,7 +36,7 @@ function UserAdmin(props: UserAdminProps) {
   };
 
   return (
-    <StyledUserAdmin>
+    <StyledUserAdmin data-aos="fade-down" data-aos-offset="0" data-aos-delay="150">
       <div className="search-group">
         <div className="search-wrapper">
           <input

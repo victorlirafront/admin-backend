@@ -11,7 +11,7 @@ function Header() {
   };
 
   return (
-    <StyledHeader>
+    <StyledHeader data-aos="fade-down" data-aos-offset="0" data-aos-delay="100">
       <div className="container">
         <div className="paper-plane-wrapper" onClick={handleHomeClick}>
           <Image
