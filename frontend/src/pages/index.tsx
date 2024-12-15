@@ -12,20 +12,12 @@ import { useAppSelector } from '@/redux/store';
 import UserAdmin from '@/components/UserAdmin/UserAdmin';
 import Modal from '@/components/Modal/Modal';
 import AddUserForm from '@/components/UserForm/UserForm';
+import { initialUser } from '@/constants/initializers';
 
 export default function Home({ data }: HomeProps) {
-  const initialUser = {
-    id: '',
-    username: '',
-    score: '',
-    state: '',
-    occupation: '',
-    method: '',
-  };
   const dispatch = useDispatch();
   const [showCreateUserModal, setShowCreateUserModal] = useState(false);
   const [currentUser, setCurrentUser] = useState(initialUser);
-
   const userCollection = useAppSelector((state) => state.usersReducer.users);
   const isUserCollectionValid = userCollection.length > 0;
 
