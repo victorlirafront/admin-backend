@@ -118,6 +118,7 @@ Esse comando irá mapear as rotas da nossa API. A seguinte mensagem aparecerá n
 
 ![Servidor Backend Rodando](https://ik.imagekit.io/Victorliradev/bossa-nova-solutions/Captura%20de%20Tela%202024-12-15%20a%CC%80s%2000.13.11_Ywv_Aaw76.png?updatedAt=1734232439790)
 
+Certifique-se de que todos os testes foram aprovados, conforme mostrado no exemplo acima.
 <br/>
 
 Agora que o servidor está rodando, o próximo passo é iniciar o **frontend**. Se você ainda estiver dentro da pasta **backend**, volte para o diretório raiz:
@@ -149,6 +150,34 @@ npm run dev
 ```
 
 Isso iniciará o frontend em [http://localhost:3000](http://localhost:3000).
+
+## 🧪 Testes Unitários ( frontend )
+
+1. Navegue até a pasta **frontend**.  
+2. Abra um novo terminal no VS Code.  
+3. Execute o comando:
+
+   ```bash
+   npm run test
+   ```
+
+O seguinte texto será exibido no terminal:  
+```plaintext
+No tests found related to files changed since last commit.
+Press `a` to run all tests, or run Jest with `--watchAll`.
+
+Watch Usage
+ › Press a to run all tests.
+ › Press f to run only failed tests.
+ › Press p to filter by a filename regex pattern.
+ › Press t to filter by a test name regex pattern.
+ › Press q to quit watch mode.
+ › Press Enter to trigger a test run.
+```
+
+Para rodar todos os testes, pressione **a** no terminal.
+
+![](https://ik.imagekit.io/Victorliradev/bossa-nova-solutions/Captura%20de%20Tela%202024-12-15%20a%CC%80s%2014.35.23_zC7TGWHqOl.png?updatedAt=1734284154935)
 
 ## Variáveis de Ambiente
 
