@@ -36,9 +36,10 @@ function AddUserForm(props: UserFormProps) {
       newUser: { username: string; score: string; state: string; occupation: string },
     ) => {
       const API_END_POINT =
-        process.env.ENVIRONMENT === 'production'
+        process.env.NEXT_PUBLIC_ENVIRONMENT === 'production'
           ? API_PRODUCTION_ENDPOINT
           : API_DEVELOPMENT_ENDPOINT;
+
       const url = `${API_END_POINT}/users`;
       const userId = user.id;
       const headers = { 'Content-Type': 'application/json' };

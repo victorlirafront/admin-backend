@@ -17,7 +17,7 @@ function UserAdmin(props: UserAdminProps) {
   const handleSearch = async () => {
     try {
       const API_END_POINT =
-        process.env.ENVIRONMENT === 'production'
+        process.env.NEXT_PUBLIC_ENVIRONMENT === 'production'
           ? API_PRODUCTION_ENDPOINT
           : API_DEVELOPMENT_ENDPOINT;
 
