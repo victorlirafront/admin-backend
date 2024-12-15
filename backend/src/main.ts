@@ -11,9 +11,9 @@ async function bootstrap() {
       allowedHeaders: ['Content-Type', 'Authorization'],
     });
 
-    const port = process.env.PORT || 3002;
-    await app.listen(port);
-    console.log(`Server is running on http://localhost:${port}`);
+    const PORT = process.env.PORT || 3001;
+    await app.listen(PORT);
+    console.log(`Server is running on http://localhost:${PORT}`);
   } catch (error) {
     console.error('Error starting the server:', error);
     process.exit(1);
