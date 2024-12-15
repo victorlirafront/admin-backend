@@ -10,7 +10,7 @@ Este é um projeto fullstack de gestão de usuários. O **frontend** foi constru
 ## 🧰 Tecnologias usadas no projeto
 
 ### Frontend
-- **Next.js**
+- **Next.js / React**
 - **TypeScript**
 - **Redux**
 - **Styled-components**
