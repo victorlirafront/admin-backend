@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 import axios from 'axios';
-import { API_END_POINT } from '@/constants/endpoints';
+import { API_DEVELOPMENT_ENDPOINT, API_PRODUCTION_ENDPOINT } from '@/constants/endpoints';
 import { User } from '../types';
 import StyledUser, { Footer, ProfileHeader, ProfileInfo, Quote } from './User.styled';
 import getGreeting from '@/helpers/getGreeting';
@@ -51,6 +51,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const { id } = context.params!;
 
   try {
+    const API_END_POINT =
+      process.env.ENVIRONMENT === 'production' ? API_PRODUCTION_ENDPOINT : API_DEVELOPMENT_ENDPOINT;
     const response = await axios.get(`${API_END_POINT}/users/${id}`);
     return {
       props: { user: response.data },

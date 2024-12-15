@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { API_END_POINT } from '@/constants/endpoints';
+import { API_DEVELOPMENT_ENDPOINT, API_PRODUCTION_ENDPOINT } from '@/constants/endpoints';
 import { useDispatch } from 'react-redux';
 import { setUsers } from '@/redux/features/users-slice/users-slice';
 import { useAppSelector } from '@/redux/store';
@@ -35,6 +35,10 @@ function AddUserForm(props: UserFormProps) {
       method: string,
       newUser: { username: string; score: string; state: string; occupation: string },
     ) => {
+      const API_END_POINT =
+        process.env.ENVIRONMENT === 'production'
+          ? API_PRODUCTION_ENDPOINT
+          : API_DEVELOPMENT_ENDPOINT;
       const url = `${API_END_POINT}/users`;
       const userId = user.id;
       const headers = { 'Content-Type': 'application/json' };

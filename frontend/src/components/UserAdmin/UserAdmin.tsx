@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { setUsers } from '@/redux/features/users-slice/users-slice';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import { API_END_POINT } from '@/constants/endpoints';
+import { API_DEVELOPMENT_ENDPOINT, API_PRODUCTION_ENDPOINT } from '@/constants/endpoints';
 
 function UserAdmin(props: UserAdminProps) {
   const { onOpenAddUserForm } = props;
@@ -16,6 +16,11 @@ function UserAdmin(props: UserAdminProps) {
 
   const handleSearch = async () => {
     try {
+      const API_END_POINT =
+        process.env.ENVIRONMENT === 'production'
+          ? API_PRODUCTION_ENDPOINT
+          : API_DEVELOPMENT_ENDPOINT;
+
       const response = await axios.get(`${API_END_POINT}/users/search?q=${searchQuery}`);
       const filteredUsers = response.data;
 
@@ -24,7 +29,6 @@ function UserAdmin(props: UserAdminProps) {
       console.error('Erro ao buscar os usuários:', error);
     }
   };
-
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       handleSearch();

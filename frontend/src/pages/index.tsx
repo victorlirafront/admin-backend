@@ -29,6 +29,10 @@ export default function Home({ data }: HomeProps) {
 
   const deleteUser = async (userId: string) => {
     try {
+      const API_END_POINT =
+        process.env.ENVIRONMENT === 'production'
+          ? API_PRODUCTION_ENDPOINT
+          : API_DEVELOPMENT_ENDPOINT;
       await axios.delete(`${API_END_POINT}/users/${userId}`);
       dispatch(setUsers(userCollection.filter((user) => user.id !== userId)));
     } catch (error) {
