@@ -14,14 +14,26 @@ export const ProfileHeader = styled.div`
   margin-bottom: 20px;
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 40px;
     color: #6b7280;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 20px;
+    }
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 19px;
     color: #6b7280;
+
+    @media screen and (max-width: 425px) {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -36,14 +48,26 @@ export const ProfileInfo = styled.div`
   margin-bottom: 20px;
   margin: 0 auto;
 
+  @media screen and (max-width: 425px) {
+    padding: 30px 40px;
+  }
+
   p {
-    font-size: 1.1rem;
+    font-size: 18px;
     color: #6b7280;
     margin: 10px 0;
+
+    @media screen and (max-width: 425px) {
+      font-size: 14px;
+    }
   }
 
   strong {
     color: #6b7280;
+
+    @media screen and (max-width: 425px) {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -69,8 +93,12 @@ export const Quote = styled.blockquote`
 export const Footer = styled.div`
   text-align: center;
   color: #888;
-  font-size: 1rem;
+  font-size: 16px;
   margin-top: 20px;
+
+  @media screen and (max-width: 425px) {
+    font-size: 14px;
+  }
 `;
 
 export default StyledUser;
