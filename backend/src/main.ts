@@ -9,7 +9,7 @@ async function bootstrap() {
     const { CORS_ORIGIN, SERVER_URL } = config[ENVIRONMENT];
 
     app.enableCors({
-      origin: CORS_ORIGIN,
+      origin: '*',
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       allowedHeaders: ['Content-Type', 'Authorization'],
     });
