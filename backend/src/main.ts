@@ -14,7 +14,7 @@ async function bootstrap() {
       allowedHeaders: ['Content-Type', 'Authorization'],
     });
 
-    const PORT = process.env.API_PORT || 3003;
+    const PORT = process.env.DB_PORT || 3002;
     await app.listen(PORT);
 
     console.log(`Server is running on ${SERVER_URL(PORT)}`);
