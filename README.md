@@ -27,6 +27,23 @@ Este é um projeto fullstack de gestão de usuários. O **frontend** foi constru
 - **Jest**
 - **Cypress**
 
+Aqui está uma versão melhor formatada:
+
+---
+
+## API Criada e Hospedada na Railway
+
+Acesse a API através do link:  
+[API na Railway](https://bossa-nova-solutions-challenge-production.up.railway.app)
+
+### Endpoint para Retornar Usuários
+
+```bash
+GET /users
+```
+
+---
+
 ## 🔧 Configuração do Projeto
 
 ### 1. Clone o Repositório
