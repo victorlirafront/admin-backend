@@ -3,10 +3,10 @@
   "editor.fontSize": 13,
   "terminal.integrated.fontSize": 14,
   "editor.codeActionsOnSave": {
-  "source.fixAll": true,
-  "source.fixAll.eslint": "explicit",
-  "source.addMissingImports": "explicit"
-},
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.addMissingImports": "explicit"
+  },
 "editor.formatOnSave": true,
   "javascript.format.enable": false,
   "typescript.format.enable": false,
