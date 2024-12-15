@@ -26,8 +26,22 @@ export const StyledCardsWrapper = styled.div`
       justify-content: center;
       margin-top: 50px;
 
+      @media screen and (max-width: 768px) {
+        margin-top: 30px;
+      }
+
       .title-error {
         color: #f08080;
+        font-size: 30px;
+        text-align: center;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 15px;
+        }
       }
     }
   }
