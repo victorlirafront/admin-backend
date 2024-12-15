@@ -34,6 +34,7 @@ export const ProfileInfo = styled.div`
   width: 100%;
   text-align: left;
   margin-bottom: 20px;
+  margin: 0 auto;
 
   p {
     font-size: 1.1rem;

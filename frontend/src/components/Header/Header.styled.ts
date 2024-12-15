@@ -9,7 +9,7 @@ export const StyledHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1260px;
+    max-width: 1328px;
     margin: 0 auto;
 
     .paper-plane-wrapper {

@@ -1,4 +1,4 @@
-import { AVATAR_MAN, STAR_ICON } from '@/constants/images';
+import { AVATAR_MAN, CHECK_IN, OCCUPATION_ICON, STAR_ICON } from '@/constants/images';
 import { StyledCard } from './Card.styled';
 import Image from 'next/image';
 import { CardProps } from './Card.types';
@@ -27,7 +27,7 @@ function Card(props: CardProps) {
           />
         </div>
         <div className="profile-informations-wrapper">
-          <h1>{truncText(username, 12)}</h1>
+          <h1>{truncText(username, 20)}</h1>
           <div className="profile-informations">
             <div className="profile-item">
               <Image
@@ -40,9 +40,23 @@ function Card(props: CardProps) {
               <p>{truncText(score, 2)}</p>
             </div>
             <div className="profile-item">
+              <Image
+                className="star-icon"
+                src={OCCUPATION_ICON}
+                height={20}
+                width={20}
+                alt="ícone de estrela"
+              />
               <p>{truncText(occupation, 13)}</p>
             </div>
             <div className="profile-item">
+              <Image
+                className="star-icon"
+                src={CHECK_IN}
+                height={20}
+                width={20}
+                alt="ícone de estrela"
+              />
               <p>{truncText(state, 2)}</p>
             </div>
           </div>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledCard = styled.div`
   padding: 20px;
-  width: 400px;
+  width: 430px;
   border-radius: 8px;
   margin: 20px 10px;
   border: 1px solid #eeeeee;
@@ -24,11 +24,16 @@ export const StyledCard = styled.div`
       .avatar-picture {
         border-radius: 100%;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 70px;
+        height: 70px;
       }
       margin-right: 30px;
     }
 
     .profile-informations-wrapper {
+      h1 {
+        font-size: 20px;
+      }
       .profile-informations {
         display: flex;
         margin-top: 10px;
@@ -41,7 +46,7 @@ export const StyledCard = styled.div`
           }
 
           &:not(:last-child) {
-            margin-right: 10px;
+            margin-right: 20px;
           }
         }
       }

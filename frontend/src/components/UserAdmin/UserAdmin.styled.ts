@@ -11,7 +11,7 @@ export const StyledUserAdmin = styled.div`
       display: flex;
       flex-direction: row;
       align-items: center;
-      width: 600px;
+      width: 1144px;
       margin-right: 30px;
       background: #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

@@ -8,3 +8,7 @@ export const SEARCH_ICON =
   'https://ik.imagekit.io/Victorliradev/bossa-nova-solutions/search-gray_HRrq0YV59.webp?updatedAt=1734181264915';
 export const CLOSE_ICON =
   'https://ik.imagekit.io/Victorliradev/bossa-nova-solutions/close_43iIxrIYi.png?updatedAt=1734184751036';
+export const OCCUPATION_ICON =
+  'https://ik.imagekit.io/Victorliradev/bossa-nova-solutions/occupation-icon_enJ6qw4oV.png?updatedAt=1734226973660';
+export const CHECK_IN =
+  'https://ik.imagekit.io/Victorliradev/bossa-nova-solutions/check-in-icon_srU5r8YS_.png?updatedAt=1734226973580';
