@@ -4,7 +4,7 @@ import { FAVICON } from '@/constants/images';
 import Head from 'next/head';
 import axios from 'axios';
 import { HomeProps, User } from './types';
-import { API_END_POINT } from '@/constants/endpoints';
+import { API_DEVELOPMENT_ENDPOINT, API_PRODUCTION_ENDPOINT } from '@/constants/endpoints';
 import { setUsers } from '@/redux/features/users-slice/users-slice';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -93,11 +93,13 @@ export default function Home({ data }: HomeProps) {
   );
 }
 
+const API_END_POINT =
+  process.env.ENVIRONMENT === 'production' ? API_PRODUCTION_ENDPOINT : API_DEVELOPMENT_ENDPOINT;
+
 export async function getServerSideProps() {
   try {
     const response = await axios.get(`${API_END_POINT}/users`);
     const data: User[] = response.data;
-
     return {
       props: { data },
     };
