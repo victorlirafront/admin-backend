@@ -113,7 +113,3 @@ As variáveis de ambiente estão configuradas no arquivo `.env`.
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-Espero que essa formatação atenda às suas necessidades! Se precisar de mais ajustes ou detalhes, não hesite em me avisar.
