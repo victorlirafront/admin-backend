@@ -44,7 +44,7 @@ Este é um projeto fullstack de gestão de usuários. Decidi desenvolver minha p
 
 Acesse a API através do link:  
 
-<a href="https://bossa-nova-solutions-challenge-ovoi2wo4n.vercel.app/" target="_blank">
+<a href="https://bossa-nova-solutions-challenge-production.up.railway.app/" target="_blank">
   Deploy -> Bossa Nova API
 </a>
 
